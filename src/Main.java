@@ -10,10 +10,12 @@ public class Main {
         if (topUpAmount > 1000) { // если сумма пополнения больше 1000
             bonus = topUpAmount / 100; // рассчитываем количество бонусных рублей
         }
-        int newBalance = initialBalance + topUpAmount + bonus; // новый баланс клиента
+        int newBalance = initialBalance + topUpAmount; // новый баланс клиента
+        int balanceWithBonus = initialBalance + topUpAmount + bonus; // баланс с бонусом
 
         // Выводим результаты на экран
         System.out.println("Итоговый баланс: " + newBalance + " руб.");
         System.out.println("Количество бонусных рублей: " + bonus + " руб.");
+        System.out.println("Итоговый баланс с бонусом: " + balanceWithBonus + " руб.");
     }
 }
